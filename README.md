@@ -34,7 +34,9 @@ Start Screen Sharing : This Starts the Screen Sharing. On starting the screen sh
 Please Note - We highly recommend that the user should remove his/her camera tab or area which shows the display of the person.This may produce some unwanted results.
 
 ## Contribution of Group Member
-Samyak Gupta(2019202)
+
+Samyak Gupta(2019202) 
+1) Worked on the Backend of the System. Developed and made changes to the pre existing Machine Learning Model.
 
 Gunar Sindhwani(2020199)
 
