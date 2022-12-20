@@ -37,3 +37,8 @@ Gunar Sindhwani(2020199)
 
 Shubham Rao(2020246)
 
+## Team Members
+Project Name - Mood Desi
+Group Number - 4
+Team Members - Samyak Gupta (2019202), Gunar Sindhwani(2020199), Shubham Rao(2020246)
+
