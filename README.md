@@ -7,9 +7,20 @@ Later after the session, An output is given in form of Bokeh Plot which shows th
 The FrontEnd Web is developed by Using HTML, CSS and JavaScript. 
 Application is based on flask.
 
+## Project Link
+The Link for the Project can be found here - 
+
 ## Frameworks Used
 FrontEnd of the Web Application is made by using HTML,CSS and Javascript
 Backend of the Web Application is made by using Flask and Python
 
 ## Working of the Project
+Working of the Front End
+The FrontEnd receives Input, The Input consists of Video Stream. The Video could be either from the Live Face Camera or could be from the Google Meeting client or any other meeting client.
+This Stream is then passed onto the backend.
+### Working of the Backend
+The Backend consists of the functions w
+
+## How to Use It?
+In Order to Use MOOD-Desi, We recommend using Google Chrome or Mozilla Firefox or Brave Browser only. 
 
