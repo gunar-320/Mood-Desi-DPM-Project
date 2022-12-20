@@ -19,7 +19,10 @@ Working of the Front End
 The FrontEnd receives Input, The Input consists of Video Stream. The Video could be either from the Live Face Camera or could be from the Google Meeting client or any other meeting client.
 This Stream is then passed onto the backend.
 ### Working of the Backend
-The Backend consists of the functions w
+The Frontend sends Images after intervals which are then sent to further functions for mood detection.
+We have detect function implemented in main.py which basically takes in an Emotion Detection Model model to run and an image as input. The Detect Function first finds the face in the image and then returns the classified emotion along with the coordinates of the face.
+We have a detected_api.py which is basically a wrapper function to turn the output of emotion detection into a JSON Format String for communication between the FrontEnd and the Backend. The Server.py is the Flask Implementation of the Backend.
+After the Session Ends,The User gets the pie chart containing the % of each Mood during the time duration over which analysis is performed.
 
 ## How to Use It?
 In Order to Use MOOD-Desi, We recommend using Google Chrome or Mozilla Firefox or Brave Browser only. 
