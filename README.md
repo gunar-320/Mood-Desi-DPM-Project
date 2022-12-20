@@ -32,15 +32,26 @@ Start Camera - This Starts the camera, receives input from the Device's Camera.
 Stop - This stops the stream
 Start Screen Sharing : This Starts the Screen Sharing. On starting the screen sharing,You can choose to share the entire screen or entire tab or entire window. We recommend sharing the Entire Tab for Meetings on Online Platforms or Recordings and Entire Window for sharing the display.
 Please Note - We highly recommend that the user should remove his/her camera tab or area which shows the display of the person.This may produce some unwanted results.
+After the Session Ends,The User gets the pie chart containing the % of each Mood during the time duration over which analysis is performed.
 
 ## Contribution of Group Member
 
 Samyak Gupta(2019202) 
 1) Worked on the Backend of the System. Developed and made changes to the pre existing Machine Learning Model.
+2) Worked on Image Analysis, Understood the working of the ML Model and made necessary changes.
+3) Worked on the Screen Sharing System.
 
-Gunar Sindhwani(2020199)
+Gunar Sindhwani(2020199) - 
+1) Worked on the Frontend of the System
+2) Deployment
+3) Handled the Visualisation Part.
+4) Worked on the Screen Sharing System
 
 Shubham Rao(2020246)
+1) Worked on the Frontend of the System.
+2) Worked entirely on the Design of the System.
+3) Worked on Integrating the Frontend and the Backend.
+4) Worked on the Video Receiving and Output of the Programme.
 
 ## Team Members
 Project Name - Mood Desi
