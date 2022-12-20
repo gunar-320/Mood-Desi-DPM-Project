@@ -25,5 +25,13 @@ The Backend consists of the functions w
 In Order to Use MOOD-Desi, We recommend using Google Chrome or Mozilla Firefox or Brave Browser only. 
 Click on Mood Detector Page. 
 On Clicking the Mood Detector Page, you would be getting three buttons :
-### HHKJS
+Start Camera - This Starts the camera, receives input from the Device's Camera.
+Stop - This stops the stream
+Start Screen Sharing : This Starts the Screen Sharing. On starting the screen sharing,You can choose to share the entire screen or entire tab or entire window. We recommend sharing the Entire Tab for Meetings on Online Platforms or Recordings and Entire Window for sharing the display.
+Please Note - We highly recommend that the user should remove his/her camera tab or area which shows the display of the person.This may produce some unwanted results.
+
+## Contribution of Group Member
+Samyak Gupta(2019202)
+Gunar Sindhwani(2020199)
+Shubham Rao(2020246)
 
