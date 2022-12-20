@@ -23,4 +23,7 @@ The Backend consists of the functions w
 
 ## How to Use It?
 In Order to Use MOOD-Desi, We recommend using Google Chrome or Mozilla Firefox or Brave Browser only. 
+Click on Mood Detector Page. 
+On Clicking the Mood Detector Page, you would be getting three buttons :
+### HHKJS
 
