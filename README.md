@@ -1,4 +1,7 @@
-# Mood-Desi-DPM-Project
+# Mood-Desi-DPM-Project (Monsoon 2022)
+
+## Acknowledgement
+We would like to thank our Professor Pravesh Biyani and our Teaching Assistants Raashid Sir, Gitansh Raj Satija and Siraj Ansari. This course was beneficial for us.
 
 ## What is Mood-Desi
 Mood Desi is an web based application that can detect mood based upon the facial recognition. The System uses the camera of the device and does live facial analysis. The Model's architecture consists of Facial detection and Emotion classification. The Facial Detection's Model is trained on WIDER FACE dataset. This model is used for classifying the faces. The Facial Expression classification was trained on Affect Net Dataset to classify as per the facial expression. 
