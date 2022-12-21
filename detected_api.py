@@ -41,7 +41,7 @@ model = attempt_load("weights/yolo.pt", map_location=device)  # load FP32 model
 
 def emo(img):
 
-    emoOutput = main.detect(img,model)
+    emoOutput = detector.detect(img,model)
     #print(len(emoOutput))
 
     output = []
