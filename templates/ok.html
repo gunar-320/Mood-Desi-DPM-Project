@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>okk</title>
+</head>
+<body>
+Hello world, kese ho?
+
+<button class="btn btn-primary" id="start_sr"> Samyak is here </button>
+
+
+
+<video id="lets_see" autoplay></video>
+
+<script type="text/javascript">
+//Get camera video
+const constraints = {
+    audio: false,
+    video: {
+        width: 1280, //{min: 640, ideal: 1280, max: 1920},
+        height: 720 //{min: 480, ideal: 720, max: 1080}
+    }
+};
+const startElemscr = document.getElementById("start_sr");
+
+startElemscr.addEventListener("click", function (evt) {
+                         navigator.mediaDevices.getDisplayMedia(constraints)
+    .then(stream => {
+        document.getElementById("lets_see").srcObject = stream;
+        console.log("Got local user video");
+
+    })
+    .catch(err => {
+        console.log('navigator.getUserMedia error: ', err)
+    });
+                    }, false);
+
+
+<!--async function startScrCapture() {-->
+<!--                        try {-->
+<!--                            document.getElementById("lets_see").srcObject = await navigator.mediaDevices.getDisplayMedia(constraints);-->
+<!--                        } catch (err) {-->
+<!--                            // Handle error-->
+<!--                            console.error("Error: " + err);-->
+<!--                        }-->
+<!--                    }-->
+
+</script>
+
+</body>
+</html>

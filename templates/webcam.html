@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mood-Desi Detector Page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="../static/fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="../static/css/templatemo-diagoona.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="tm-container">
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <div class="media-body">
+                            <h5 class="tm-sitename text-uppercase"><img src="../static/logo.jpg"
+                                width="150"
+                                height="150" /> : How you Feeling?</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button"
+                            data-toggle="collapse" data-target="#navbar-nav"
+                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="services.html">Mood Detector <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="contact.html">Queries</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+
+
+        <div>
+            <style>
+                /* CSS comes here */
+
+                frame {
+                    width: 300px;
+                    height: 250px;
+                    border: 3px solid #ccc;
+                    background: #eee;
+                    margin: auto;
+                    padding: 15px 10px;
+               }
+
+
+                video {
+                    border: 20px solid transparent;
+                    width: 800px;
+                    height: 600px;
+
+                }
+
+                .camera {
+                    width: 340px;
+                    display: inline-block;
+                }
+
+                .containerdiv{
+
+                    position: relative; right: 0; top: 0; left: 0
+                }
+
+                </style>
+                    <div class="contentarea">
+                        <h1 style="text-align: center"> Mood Detector</h1>
+                        <div style="align-items: right; width: 100%">
+                            <div class="camera" style="float: left;">
+                                <video id="video">Video stream not available.</video>
+                            </div>
+                            <div class="output"></div>
+                            <button id="startbutton">CLick Me</button>
+                        </div>
+
+                    </div>
+
+                    <script>
+                        /* JS comes here */
+                        (function() {
+
+                            var width = 320; // We will scale the photo width to this
+                            var height = 0; // This will be computed based on the input stream
+
+                            var streaming = false;
+
+                            var video = null;
+                            var canvas = null;
+                            var photo = null;
+                            var startbutton = true;
+
+                            function startup() {
+                                video = document.getElementById('video');
+                                canvas = document.getElementById('canvas');
+                                photo = document.getElementById('photo');
+                                startbutton = document.getElementById('startbutton');
+
+
+                                video.addEventListener('canplay', function(ev) {
+                                    if (!streaming) {
+                                        height = video.videoHeight / (video.videoWidth / width);
+
+                                        if (isNaN(height)) {
+                                            height = width / (4 / 3);
+                                        }
+
+                                        video.setAttribute('width', width);
+                                        video.setAttribute('height', height);
+                                        canvas.setAttribute('width', width);
+                                        canvas.setAttribute('height', height);
+                                        streaming = true;
+                                    }
+                                }, false);
+
+                                startbutton.addEventListener('click', function(ev) {
+                                    takepicture();
+                                    ev.preventDefault();
+                                }, false);
+                            }
+
+
+                            function clearphoto() {
+                                var context = canvas.getContext('2d');
+                                context.fillStyle = "#AAA";
+                                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                                var data = canvas.toDataURL('image/png');
+                                photo.setAttribute('src', data);
+                            }
+
+                            function takepicture() {
+                                video = document.getElementById('video');
+                                canvas = document.getElementById('canvas');
+
+                                navigator.mediaDevices.getUserMedia({
+                                    video: true,
+                                    audio: false
+                                })
+                                .then(function(stream) {
+                                    video.srcObject = stream;
+                                    video.play();
+                                })
+                                .catch(function(err) {
+                                    console.log("An error occurred: " + err);
+                                });
+                            }
+
+                            window.addEventListener('load', startup, false);
+                        })();
+                        </script>
+        </div>
+
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.backstretch.min.js"></script>
+    <script src="../static/js/templatemo-script.js"></script>
+</body>
+
+</html>
