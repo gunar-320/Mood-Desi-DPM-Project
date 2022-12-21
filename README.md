@@ -56,6 +56,11 @@ Shubham Rao(2020246)
 3) Worked on Integrating the Frontend and the Backend.
 4) Worked on the Video Receiving and Output of the Programme.
 
+## Running Locally on the System
+In order to Run Locally on the System, download the code from the Github. 
+ --> Unzip the Code
+ --> Unzip the Folders inside the Code
+
 ## Team Members
 Project Name - Mood Desi
 Group Number - 4
