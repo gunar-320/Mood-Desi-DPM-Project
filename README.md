@@ -33,9 +33,15 @@ Click on Mood Detector Page.
 On Clicking the Mood Detector Page, you would be getting three buttons :
 Start Camera - This Starts the camera, receives input from the Device's Camera.
 Stop - This stops the stream
+Analysis - Provides the Analysis over the meeting duration.
 Start Screen Sharing : This Starts the Screen Sharing. On starting the screen sharing,You can choose to share the entire screen or entire tab or entire window. We recommend sharing the Entire Tab for Meetings on Online Platforms or Recordings and Entire Window for sharing the display.
 Please Note - We highly recommend that the user should remove his/her camera tab or area which shows the display of the person.This may produce some unwanted results.
 After the Session Ends,The User gets the pie chart containing the % of each Mood during the time duration over which analysis is performed.
+
+As this is hosted on http protocol and not https, 
+follow the following steps
+1) Type chrome://flags/#unsafely-treat-insecure-origin-as-secure in the address bar.
+2) Add The Link in the Box and click enabled and then relaunch chrome.
 
 ## Contribution of Group Member
 
